@@ -1,0 +1,191 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import "./LandingPage.css";
+import Logo from "../assets/logo.png";
+import Computer from "../assets/Computer.png";
+
+const LandingPage = () => {
+  const navigate = useNavigate();
+
+  const handleNavigateToLogin = () => {
+    navigate("/login");
+  };
+
+  return (
+    <div>
+      {/* ======= HEADER ======= */}
+      <header className="header">
+        <div className="container header-container">
+          <div className="logo">
+            <img src={Logo} alt="IQruit Logo" />
+            <span>IQruit</span>
+          </div>
+
+          <div className="header-buttons">
+            <button className="signin" onClick={handleNavigateToLogin}>
+              Sign In
+            </button>
+            <button className="btn-primary" onClick={handleNavigateToLogin}>
+              Get Started
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* ======= HERO SECTION ======= */}
+      <section className="hero">
+        <div className="container hero-container">
+          <div className="hero-text">
+            <h1>
+              Master Technical <span className="highlight">Interviews</span>
+            </h1>
+            <p>
+              Prepare for your dream job with comprehensive quizzes on Computer
+              Networks, Database Management Systems, and Operating Systems.
+            </p>
+            <div className="hero-buttons">
+              <button className="btn-primary" onClick={handleNavigateToLogin}>
+                Start Learning
+              </button>
+              <button className="btn-secondary" onClick={handleNavigateToLogin}>
+                View Courses
+              </button>
+            </div>
+            <div className="hero-stats">
+              <span>📘 1000+ Questions</span>
+              <span>🏆 Expert Curated</span>
+              <span>👥 50k+ Students</span>
+            </div>
+          </div>
+          <div className="hero-image">
+            <img src={Computer} alt="Learning Illustration" />
+          </div>
+        </div>
+      </section>
+
+      {/* ======= SUBJECTS SECTION ======= */}
+      <section className="subjects">
+        <div className="container">
+          <h2>Master Core CS Subjects</h2>
+          <p className="subtitle">
+            Comprehensive coverage of the most important topics for technical
+            interviews
+          </p>
+
+          <div className="subject-cards">
+            {/* Computer Networks */}
+            <div className="card">
+              <div className="card-icon">🔗</div>
+              <h3>Computer Networks</h3>
+              <p>
+                Master networking concepts, protocols, and architectures
+                essential for technical interviews.
+              </p>
+              <div className="tags">
+                <span>TCP/IP</span>
+                <span>OSI Model</span>
+                <span>Routing</span>
+                <span>Network Security</span>
+              </div>
+              <div className="card-footer">
+                <span>350+ Questions</span>
+                <button
+                  className="start-quiz"
+                  onClick={handleNavigateToLogin}
+                >
+                  Start Quiz →
+                </button>
+              </div>
+            </div>
+
+            {/* Database Management */}
+            <div className="card">
+              <div className="card-icon">🗄️</div>
+              <h3>Database Management</h3>
+              <p>
+                Deep dive into SQL, NoSQL, transactions, and database design
+                principles.
+              </p>
+              <div className="tags">
+                <span>SQL Queries</span>
+                <span>Normalization</span>
+                <span>Indexing</span>
+                <span>ACID Properties</span>
+              </div>
+              <div className="card-footer">
+                <span>400+ Questions</span>
+                <button
+                  className="start-quiz"
+                  onClick={handleNavigateToLogin}
+                >
+                  Start Quiz →
+                </button>
+              </div>
+            </div>
+
+            {/* Operating Systems */}
+            <div className="card">
+              <div className="card-icon">⚙️</div>
+              <h3>Operating Systems</h3>
+              <p>
+                Understand processes, memory management, file systems, and
+                system calls.
+              </p>
+              <div className="tags">
+                <span>Process Management</span>
+                <span>Memory</span>
+                <span>File Systems</span>
+                <span>Synchronization</span>
+              </div>
+              <div className="card-footer">
+                <span>300+ Questions</span>
+                <button
+                  className="start-quiz"
+                  onClick={handleNavigateToLogin}
+                >
+                  Start Quiz →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ======= FOOTER ======= */}
+      <footer className="footer">
+        <div className="container footer-container">
+          <div className="footer-about">
+            <div className="logo">
+              <img src={Logo} alt="IQruit Logo" />
+              <span>IQruit</span>
+            </div>
+            <p>
+              Your ultimate destination for technical interview preparation.
+              Master CN, DBMS, and OS concepts.
+            </p>
+          </div>
+          <div className="footer-links">
+            <div>
+              <h4>Subjects</h4>
+              <a href="#">Computer Networks</a>
+              <a href="#">Database Management</a>
+              <a href="#">Operating Systems</a>
+            </div>
+            <div>
+              <h4>Resources</h4>
+              <a href="#">Practice Tests</a>
+              <a href="#">Study Guides</a>
+              <a href="#">Interview Tips</a>
+              <a href="#">Success Stories</a>
+            </div>
+          </div>
+        </div>
+        <p className="footer-copy">
+          © 2024 IQruit. All rights reserved. Built for aspiring technologists.
+        </p>
+      </footer>
+    </div>
+  );
+};
+
+export default LandingPage;
