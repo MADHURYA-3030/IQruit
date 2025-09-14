@@ -1,18 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Navbar from './components/NavBar';
+import HomePage from './components/HomePage';
+import Footer from './components/Footer';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-     
-     <div> IQruit </div>
-        
-    </>
-  )
+   
+    <div className="app-container">
+      <Navbar />
+      <HomePage />
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
