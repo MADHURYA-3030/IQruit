@@ -38,7 +38,7 @@
 .profile-btn {
   display: flex;
   align-items: center;
-  background: #f0f0f0;
+  background: #007bffb9;
   padding: 8px 14px;
   border-radius: 6px;
   font-size: 14px;
@@ -48,4 +48,13 @@
 .profile-icon {
   margin-right: 8px;
   font-size: 18px;
+}
+.logout-btn {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
 }
