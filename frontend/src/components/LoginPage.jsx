@@ -6,8 +6,11 @@ const LoginPage = () => {
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
-    e.preventDefault(); // Prevent form reload
-    navigate("/home");  // Redirect to Home page
+    e.preventDefault();
+    // simulate login success
+    localStorage.setItem("token", "dummyToken");
+    navigate("/"); // back to landing page
+    window.location.reload();
   };
 
   return (
