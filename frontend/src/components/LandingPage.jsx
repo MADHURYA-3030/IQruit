@@ -30,39 +30,34 @@ const LandingPage = () => {
   const unitToSlug = (unit) => {
     if (!unit) return "";
     const m = {
-      "Computer Networks": "cn",
-      "Database Management": "dbms",
-      "Operating Systems": "os",
+      "Computer Networks": "ComputerNetworks",
+      "Database Management": "Dbms",
+      "Operating Systems": "OperatingSystems",
     };
     return m[unit] || unit.toLowerCase().replace(/\s+/g, "-");
   };
 
   // require login before navigating to quiz page
   const handleStartQuiz = (unit) => {
-    const token = localStorage.getItem("token");
-    if (!token) {
-      // send user to login and indicate intended subject so login can redirect back
-      const intended = unit ? { subject: unitToSlug(unit) } : { subject: null };
-      navigate("/login", { state: { from: location.pathname, intended } });
-      return;
-    }
+  const token = localStorage.getItem("token");
+  const slug = unitToSlug(unit); // convert subject name to slug (e.g., cn, dbms, os)
 
-    // user logged in -> navigate to quiz route
-    if (unit) {
-      const slug = unitToSlug(unit);
-      navigate(`/quiz/${slug}`);
-    } else {
-      navigate("/quiz");
-    }
+  // If not logged in, redirect to login page with intended subject info
+  if (!token) {
+    navigate("/login", {
+      state: { from: location.pathname, intended: { subject: slug } },
+    });
+    return;
+  }
 
-    // fallback: if SPA route not applied, full reload after short delay
-    setTimeout(() => {
-      if (window.location.pathname.indexOf("/quiz") !== 0) {
-        const url = unit ? `/quiz/${encodeURIComponent(unitToSlug(unit))}` : "/quiz";
-        window.location.href = url;
-      }
-    }, 200);
-  };
+  // User logged in → navigate directly to the subject-specific quiz page
+  if (slug) {
+    navigate(`/${slug}`);
+  } else {
+    navigate("/quiz");
+  }
+};
+
 
   return (
     <div>
