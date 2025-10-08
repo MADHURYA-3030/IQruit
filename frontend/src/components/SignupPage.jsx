@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import "./LoginPage.css";
 
 const SignupPage = () => {
   const navigate = useNavigate();
-
+  const location = useLocation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -28,7 +28,28 @@ const SignupPage = () => {
       const data = await res.json();
 
       if (res.ok) {
-        alert("Account created successfully!");
+        // If backend returns a token after signup, store and notify
+        if (data.token) {
+          localStorage.setItem("token", data.token);
+          window.dispatchEvent(new Event("tokenChanged"));
+          // redirect to intended if provided
+          const intended = location.state?.intended;
+          if (intended) {
+            if (intended.subject) {
+              navigate(`/quiz/${intended.subject}`);
+              return;
+            }
+            if (intended.action === "openQuiz") {
+              navigate("/", { state: { scrollTo: "subjects" } });
+              return;
+            }
+          }
+          // otherwise go home
+          navigate("/");
+          return;
+        }
+        // otherwise go to login so user can sign in
+        alert("Account created successfully! Please login.");
         navigate("/login");
       } else {
         alert(data.message || "Signup failed!");
@@ -73,7 +94,13 @@ const SignupPage = () => {
 
         <p>
           Already have an account?{" "}
-          <a href="#" onClick={() => navigate("/login")}>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              navigate("/login", { state: { intended: location.state?.intended } });
+            }}
+          >
             Login
           </a>
         </p>
