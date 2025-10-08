@@ -1,37 +1,22 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./LandingPage.css";
-import Logo from "../assets/logo.png";
 import Computer from "../assets/Computer.png";
+import "./LandingPage.css";
 
 const LandingPage = () => {
   const navigate = useNavigate();
+  const token = localStorage.getItem("token");
 
-  const handleNavigateToLogin = () => {
-    navigate("/login");
+  const handleStartQuiz = () => {
+    if (!token) {
+      navigate("/login");
+    } else {
+      alert("✅ Quiz started! (replace with quiz page navigation)");
+    }
   };
 
   return (
     <div>
-      {/* ======= HEADER ======= */}
-      <header className="header">
-        <div className="container header-container">
-          <div className="logo">
-            <img src={Logo} alt="IQruit Logo" />
-            <span>IQruit</span>
-          </div>
-
-          <div className="header-buttons">
-            <button className="signin" onClick={handleNavigateToLogin}>
-              Sign In
-            </button>
-            <button className="btn-primary" onClick={handleNavigateToLogin}>
-              Get Started
-            </button>
-          </div>
-        </div>
-      </header>
-
       {/* ======= HERO SECTION ======= */}
       <section className="hero">
         <div className="container hero-container">
@@ -44,10 +29,10 @@ const LandingPage = () => {
               Networks, Database Management Systems, and Operating Systems.
             </p>
             <div className="hero-buttons">
-              <button className="btn-primary" onClick={handleNavigateToLogin}>
+              <button className="btn-primary" onClick={handleStartQuiz}>
                 Start Learning
               </button>
-              <button className="btn-secondary" onClick={handleNavigateToLogin}>
+              <button className="btn-secondary" onClick={handleStartQuiz}>
                 View Courses
               </button>
             </div>
@@ -89,10 +74,7 @@ const LandingPage = () => {
               </div>
               <div className="card-footer">
                 <span>350+ Questions</span>
-                <button
-                  className="start-quiz"
-                  onClick={handleNavigateToLogin}
-                >
+                <button className="start-quiz" onClick={handleStartQuiz}>
                   Start Quiz →
                 </button>
               </div>
@@ -114,10 +96,7 @@ const LandingPage = () => {
               </div>
               <div className="card-footer">
                 <span>400+ Questions</span>
-                <button
-                  className="start-quiz"
-                  onClick={handleNavigateToLogin}
-                >
+                <button className="start-quiz" onClick={handleStartQuiz}>
                   Start Quiz →
                 </button>
               </div>
@@ -129,7 +108,7 @@ const LandingPage = () => {
               <h3>Operating Systems</h3>
               <p>
                 Understand processes, memory management, file systems, and
-                system calls.
+                system calls and many more.
               </p>
               <div className="tags">
                 <span>Process Management</span>
@@ -139,10 +118,7 @@ const LandingPage = () => {
               </div>
               <div className="card-footer">
                 <span>300+ Questions</span>
-                <button
-                  className="start-quiz"
-                  onClick={handleNavigateToLogin}
-                >
+                <button className="start-quiz" onClick={handleStartQuiz}>
                   Start Quiz →
                 </button>
               </div>
@@ -150,40 +126,6 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
-
-      {/* ======= FOOTER ======= */}
-      <footer className="footer">
-        <div className="container footer-container">
-          <div className="footer-about">
-            <div className="logo">
-              <img src={Logo} alt="IQruit Logo" />
-              <span>IQruit</span>
-            </div>
-            <p>
-              Your ultimate destination for technical interview preparation.
-              Master CN, DBMS, and OS concepts.
-            </p>
-          </div>
-          <div className="footer-links">
-            <div>
-              <h4>Subjects</h4>
-              <a href="#">Computer Networks</a>
-              <a href="#">Database Management</a>
-              <a href="#">Operating Systems</a>
-            </div>
-            <div>
-              <h4>Resources</h4>
-              <a href="#">Practice Tests</a>
-              <a href="#">Study Guides</a>
-              <a href="#">Interview Tips</a>
-              <a href="#">Success Stories</a>
-            </div>
-          </div>
-        </div>
-        <p className="footer-copy">
-          © 2024 IQruit. All rights reserved. Built for aspiring technologists.
-        </p>
-      </footer>
     </div>
   );
 };
