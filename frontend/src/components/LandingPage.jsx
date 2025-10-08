@@ -108,7 +108,7 @@ const LandingPage = () => {
               <h3>Operating Systems</h3>
               <p>
                 Understand processes, memory management, file systems, and
-                system calls.
+                system calls and many more.
               </p>
               <div className="tags">
                 <span>Process Management</span>
