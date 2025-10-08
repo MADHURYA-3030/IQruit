@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import "./LoginPage.css";
 
 const LoginPage = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [formData, setFormData] = useState({ email: "", password: "" });
 
   const handleChange = (e) => {
@@ -22,10 +23,28 @@ const LoginPage = () => {
       const data = await res.json();
 
       if (res.ok) {
-        // Login successful
-        localStorage.setItem("token", data.token); // store JWT
-        navigate("/"); // back to landing page or main page
-        window.location.reload();
+        // store JWT exactly as returned by backend
+        if (data.token) {
+          localStorage.setItem("token", data.token);
+          // notify same-tab listeners (Header listens for this)
+          window.dispatchEvent(new Event("tokenChanged"));
+        }
+
+        // handle intended redirect if provided
+        const intended = location.state?.intended;
+        if (intended) {
+          if (intended.subject) {
+            navigate(`/quiz/${intended.subject}`);
+            return;
+          }
+          if (intended.action === "openQuiz") {
+            navigate("/", { state: { scrollTo: "subjects" } });
+            return;
+          }
+        }
+
+        // default redirect after login
+        navigate("/");
       } else {
         alert(data.message || "Invalid email or password!");
       }
@@ -64,7 +83,7 @@ const LoginPage = () => {
             href="#"
             onClick={(e) => {
               e.preventDefault();
-              navigate("/signup");
+              navigate("/signup", { state: { intended: location.state?.intended } });
             }}
           >
             Sign up here
