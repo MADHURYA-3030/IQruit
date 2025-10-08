@@ -9,117 +9,77 @@ const SignupPage = () => {
     name: "",
     email: "",
     password: "",
-    otp: "",
   });
-
-  const [isOtpSent, setIsOtpSent] = useState(false);
-  const [isVerified, setIsVerified] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const sendOtp = () => {
-    if (!formData.email) {
-      alert("Please enter your email before requesting OTP!");
-      return;
-    }
-    // Simulate sending OTP
-    setIsOtpSent(true);
-    alert(`OTP sent to ${formData.email}`);
-  };
-
-  const verifyOtp = () => {
-    if (formData.otp === "123456") {
-      setIsVerified(true);
-      alert("Email verified successfully!");
-    } else {
-      alert("Invalid OTP. Please try again.");
-    }
-  };
-
-  const handleSignup = (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
-    if (!isVerified) {
-      alert("Please verify your email before signing up.");
-      return;
+
+    try {
+      const res = await fetch("http://localhost:5000/api/auth/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        alert("Account created successfully!");
+        navigate("/login");
+      } else {
+        alert(data.message || "Signup failed!");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Server error. Please try again later.");
     }
-    alert("Account created successfully!");
-    navigate("/login");
   };
 
   return (
-  <div className="page">
-    <div className="signup-container">
-      <h2>Create Account</h2>
-      <form className="signup-form" onSubmit={handleSignup}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Full Name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-
-        <input
-          type="email"
-          name="email"
-          placeholder="Email Address"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={formData.password}
-          onChange={handleChange}
-          required
-        />
-
-        {/* OTP Section */}
-        {isOtpSent && (
-          <div className="otp-section">
-            <input
-              type="text"
-              name="otp"
-              placeholder="Enter OTP"
-              value={formData.otp}
-              onChange={handleChange}
-              required
-            />
-            <button
-              type="button"
-              className="verify-btn"
-              onClick={verifyOtp}
-            >
-              Verify
-            </button>
-          </div>
-        )}
-
-        {!isOtpSent ? (
-          <button type="button" onClick={sendOtp}>
-            Send Verification Code
-          </button>
-        ) : (
+    <div className="page">
+      <div className="signup-container">
+        <h2>Create Account</h2>
+        <form className="signup-form" onSubmit={handleSignup}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Full Name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            value={formData.password}
+            onChange={handleChange}
+            required
+          />
           <button type="submit">Sign Up</button>
-        )}
-      </form>
+        </form>
 
-      <p>
-        Already have an account?{" "}
-        <a href="#" onClick={() => navigate("/login")}>
-          Login
-        </a>
-      </p>
+        <p>
+          Already have an account?{" "}
+          <a href="#" onClick={() => navigate("/login")}>
+            Login
+          </a>
+        </p>
+      </div>
     </div>
-  </div>
-);
-
+  );
 };
 
 export default SignupPage;
