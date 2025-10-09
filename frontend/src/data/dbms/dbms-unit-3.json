@@ -1,0 +1,129 @@
+{
+  "quizTitle": "DBMS Quiz - Unit III: Advanced SQL",
+  "category": "Database Management Systems",
+  "unitName": "Unit III: Advanced SQL",
+  "difficulty": "Medium",
+  "createdAt": "2025-10-08T12:05:00Z",
+  "questions": [
+    {
+      "questionId": 1,
+      "questionText": "Which JOIN returns only matching rows from both tables?",
+      "options": ["INNER JOIN", "LEFT JOIN", "RIGHT JOIN", "FULL JOIN"],
+      "correctAnswer": "INNER JOIN"
+    },
+    {
+      "questionId": 2,
+      "questionText": "Which JOIN returns all rows from the left table and matching rows from the right table?",
+      "options": ["LEFT JOIN", "RIGHT JOIN", "INNER JOIN", "CROSS JOIN"],
+      "correctAnswer": "LEFT JOIN"
+    },
+    {
+      "questionId": 3,
+      "questionText": "Which clause is used to group rows based on a column’s values?",
+      "options": ["ORDER BY", "GROUP BY", "HAVING", "WHERE"],
+      "correctAnswer": "GROUP BY"
+    },
+    {
+      "questionId": 4,
+      "questionText": "Which SQL function returns the number of rows in a group?",
+      "options": ["COUNT()", "SUM()", "AVG()", "MAX()"],
+      "correctAnswer": "COUNT()"
+    },
+    {
+      "questionId": 5,
+      "questionText": "Which clause filters the result of GROUP BY?",
+      "options": ["WHERE", "HAVING", "ORDER BY", "DISTINCT"],
+      "correctAnswer": "HAVING"
+    },
+    {
+      "questionId": 6,
+      "questionText": "Which JOIN returns all rows when there is a match in one of the tables?",
+      "options": ["FULL OUTER JOIN", "INNER JOIN", "LEFT JOIN", "RIGHT JOIN"],
+      "correctAnswer": "FULL OUTER JOIN"
+    },
+    {
+      "questionId": 7,
+      "questionText": "Which SQL operator checks for a value in a list?",
+      "options": ["IN", "LIKE", "BETWEEN", "EXISTS"],
+      "correctAnswer": "IN"
+    },
+    {
+      "questionId": 8,
+      "questionText": "Which SQL clause is used to sort query results?",
+      "options": ["ORDER BY", "GROUP BY", "HAVING", "DISTINCT"],
+      "correctAnswer": "ORDER BY"
+    },
+    {
+      "questionId": 9,
+      "questionText": "What is a subquery?",
+      "options": ["A query inside another query", "A query executed after main query", "A temporary table", "A view"],
+      "correctAnswer": "A query inside another query"
+    },
+    {
+      "questionId": 10,
+      "questionText": "Which function finds the largest value in a column?",
+      "options": ["MAX()", "MIN()", "AVG()", "SUM()"],
+      "correctAnswer": "MAX()"
+    },
+    {
+      "questionId": 11,
+      "questionText": "Which function finds the smallest value in a column?",
+      "options": ["MIN()", "MAX()", "AVG()", "SUM()"],
+      "correctAnswer": "MIN()"
+    },
+    {
+      "questionId": 12,
+      "questionText": "Which function calculates the average of numeric values?",
+      "options": ["AVG()", "SUM()", "COUNT()", "MAX()"],
+      "correctAnswer": "AVG()"
+    },
+    {
+      "questionId": 13,
+      "questionText": "Which operator is used for pattern matching in SQL?",
+      "options": ["LIKE", "IN", "BETWEEN", "EXISTS"],
+      "correctAnswer": "LIKE"
+    },
+    {
+      "questionId": 14,
+      "questionText": "Which clause eliminates duplicate records?",
+      "options": ["DISTINCT", "UNIQUE", "GROUP BY", "HAVING"],
+      "correctAnswer": "DISTINCT"
+    },
+    {
+      "questionId": 15,
+      "questionText": "Which keyword combines the results of two SELECT statements and removes duplicates?",
+      "options": ["UNION", "UNION ALL", "INTERSECT", "JOIN"],
+      "correctAnswer": "UNION"
+    },
+    {
+      "questionId": 16,
+      "questionText": "Which JOIN returns the Cartesian product of two tables?",
+      "options": ["CROSS JOIN", "INNER JOIN", "LEFT JOIN", "FULL JOIN"],
+      "correctAnswer": "CROSS JOIN"
+    },
+    {
+      "questionId": 17,
+      "questionText": "Which SQL statement is used to create a new view?",
+      "options": ["CREATE VIEW", "ALTER VIEW", "INSERT VIEW", "ADD VIEW"],
+      "correctAnswer": "CREATE VIEW"
+    },
+    {
+      "questionId": 18,
+      "questionText": "Which keyword is used to check if a subquery returns any rows?",
+      "options": ["EXISTS", "IN", "ANY", "ALL"],
+      "correctAnswer": "EXISTS"
+    },
+    {
+      "questionId": 19,
+      "questionText": "Which SQL clause restricts rows returned by a query?",
+      "options": ["WHERE", "HAVING", "ORDER BY", "GROUP BY"],
+      "correctAnswer": "WHERE"
+    },
+    {
+      "questionId": 20,
+      "questionText": "Which SQL command modifies data in a table?",
+      "options": ["UPDATE", "SELECT", "CREATE", "ALTER"],
+      "correctAnswer": "UPDATE"
+    }
+  ]
+}

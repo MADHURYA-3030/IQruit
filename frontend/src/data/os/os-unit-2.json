@@ -1,0 +1,249 @@
+
+{
+  "quizTitle": "Operating Systems – Unit 2: Processes, Threads, and CPU Scheduling",
+  "category": "Operating Systems",
+  "difficulty": "Medium-Hard",
+  "createdAt": "2025-10-08T12:45:00Z",
+  "questions": [
+    {
+      "questionId": 1,
+      "unit": "Unit 2: Processes, Threads, and CPU Scheduling",
+      "questionText": "Which of the following states is a process NOT normally found in?",
+      "options": [
+        "Ready",
+        "Running",
+        "Waiting",
+        "Terminating"
+      ],
+      "correctAnswer": "Terminating"
+    },
+    {
+      "questionId": 2,
+      "unit": "Unit 2: Processes, Threads, and CPU Scheduling",
+      "questionText": "What is the main role of the Process Control Block (PCB)?",
+      "options": [
+        "Stores process metadata like registers, state, and program counter",
+        "Manages system calls",
+        "Schedules processes for execution",
+        "Contains process instructions"
+      ],
+      "correctAnswer": "Stores process metadata like registers, state, and program counter"
+    },
+    {
+      "questionId": 3,
+      "unit": "Unit 2: Processes, Threads, and CPU Scheduling",
+      "questionText": "Which operation creates a new process in UNIX systems?",
+      "options": [
+        "exec()",
+        "fork()",
+        "spawn()",
+        "create()"
+      ],
+      "correctAnswer": "fork()"
+    },
+    {
+      "questionId": 4,
+      "unit": "Unit 2: Processes, Threads, and CPU Scheduling",
+      "questionText": "Which scheduling algorithm may cause starvation?",
+      "options": [
+        "First-Come, First-Served (FCFS)",
+        "Shortest Job Next (SJN)",
+        "Round Robin (RR)",
+        "Multilevel Queue Scheduling"
+      ],
+      "correctAnswer": "Shortest Job Next (SJN)"
+    },
+    {
+      "questionId": 5,
+      "unit": "Unit 2: Processes, Threads, and CPU Scheduling",
+      "questionText": "Which of the following is TRUE about threads?",
+      "options": [
+        "Each thread has its own address space",
+        "Threads share the same code and data sections",
+        "Threads cannot communicate with each other",
+        "Threads require separate PCB for each"
+      ],
+      "correctAnswer": "Threads share the same code and data sections"
+    },
+    {
+      "questionId": 6,
+      "unit": "Unit 2: Processes, Threads, and CPU Scheduling",
+      "questionText": "In multithreading models, user threads are mapped to kernel threads using:",
+      "options": [
+        "One-to-One model",
+        "Many-to-One model",
+        "Many-to-Many model",
+        "All of the above depending on OS"
+      ],
+      "correctAnswer": "All of the above depending on OS"
+    },
+    {
+      "questionId": 7,
+      "unit": "Unit 2: Processes, Threads, and CPU Scheduling",
+      "questionText": "Which scheduling algorithm guarantees that each process gets CPU at regular intervals?",
+      "options": [
+        "Round Robin",
+        "SJF",
+        "Priority Scheduling",
+        "FCFS"
+      ],
+      "correctAnswer": "Round Robin"
+    },
+    {
+      "questionId": 8,
+      "unit": "Unit 2: Processes, Threads, and CPU Scheduling",
+      "questionText": "What does context switching involve?",
+      "options": [
+        "Saving and restoring CPU state of processes",
+        "Changing process IDs",
+        "Executing system calls",
+        "Loading executable code"
+      ],
+      "correctAnswer": "Saving and restoring CPU state of processes"
+    },
+    {
+      "questionId": 9,
+      "unit": "Unit 2: Processes, Threads, and CPU Scheduling",
+      "questionText": "Which data structure is typically used for Ready Queue in CPU scheduling?",
+      "options": [
+        "Stack",
+        "Linked List",
+        "Queue",
+        "Tree"
+      ],
+      "correctAnswer": "Queue"
+    },
+    {
+      "questionId": 10,
+      "unit": "Unit 2: Processes, Threads, and CPU Scheduling",
+      "questionText": "The ‘aging’ technique in CPU scheduling is used to:",
+      "options": [
+        "Reduce CPU utilization",
+        "Prevent starvation",
+        "Increase waiting time",
+        "Improve turnaround time"
+      ],
+      "correctAnswer": "Prevent starvation"
+    },
+    {
+      "questionId": 11,
+      "unit": "Unit 2: Processes, Threads, and CPU Scheduling",
+      "questionText": "Which multithreading library is widely used in UNIX/Linux systems?",
+      "options": [
+        "WinThreads",
+        "POSIX Pthreads",
+        "Java Threads",
+        "MicroThreads"
+      ],
+      "correctAnswer": "POSIX Pthreads"
+    },
+    {
+      "questionId": 12,
+      "unit": "Unit 2: Processes, Threads, and CPU Scheduling",
+      "questionText": "What happens when a process performs an I/O operation?",
+      "options": [
+        "It moves to Running state",
+        "It enters Waiting (Blocked) state",
+        "It is terminated",
+        "It gets higher priority"
+      ],
+      "correctAnswer": "It enters Waiting (Blocked) state"
+    },
+    {
+      "questionId": 13,
+      "unit": "Unit 2: Processes, Threads, and CPU Scheduling",
+      "questionText": "Which of the following scheduling algorithms is preemptive?",
+      "options": [
+        "FCFS",
+        "SJF (Non-preemptive)",
+        "Priority Scheduling (Preemptive)",
+        "None"
+      ],
+      "correctAnswer": "Priority Scheduling (Preemptive)"
+    },
+    {
+      "questionId": 14,
+      "unit": "Unit 2: Processes, Threads, and CPU Scheduling",
+      "questionText": "What is the main goal of CPU scheduling?",
+      "options": [
+        "To minimize memory usage",
+        "To maximize CPU utilization and throughput",
+        "To minimize hardware cost",
+        "To reduce file access time"
+      ],
+      "correctAnswer": "To maximize CPU utilization and throughput"
+    },
+    {
+      "questionId": 15,
+      "unit": "Unit 2: Processes, Threads, and CPU Scheduling",
+      "questionText": "What is Inter-Process Communication (IPC) used for?",
+      "options": [
+        "To transfer data between processes",
+        "To control access to kernel",
+        "To compile programs",
+        "To allocate memory"
+      ],
+      "correctAnswer": "To transfer data between processes"
+    },
+    {
+      "questionId": 16,
+      "unit": "Unit 2: Processes, Threads, and CPU Scheduling",
+      "questionText": "Which method of IPC is fastest for small data transfer?",
+      "options": [
+        "Pipes",
+        "Shared Memory",
+        "Message Queues",
+        "Sockets"
+      ],
+      "correctAnswer": "Shared Memory"
+    },
+    {
+      "questionId": 17,
+      "unit": "Unit 2: Processes, Threads, and CPU Scheduling",
+      "questionText": "Which of the following is true for multi-processor scheduling?",
+      "options": [
+        "Load balancing is important",
+        "Processes cannot migrate between CPUs",
+        "It reduces CPU utilization",
+        "Only one process runs at a time"
+      ],
+      "correctAnswer": "Load balancing is important"
+    },
+    {
+      "questionId": 18,
+      "unit": "Unit 2: Processes, Threads, and CPU Scheduling",
+      "questionText": "In CPU scheduling, the turnaround time is:",
+      "options": [
+        "Waiting time + Burst time",
+        "Response time + I/O time",
+        "Time from submission to completion",
+        "Context switch duration"
+      ],
+      "correctAnswer": "Time from submission to completion"
+    },
+    {
+      "questionId": 19,
+      "unit": "Unit 2: Processes, Threads, and CPU Scheduling",
+      "questionText": "Which type of thread runs in user space without kernel support?",
+      "options": [
+        "User thread",
+        "Kernel thread",
+        "Hybrid thread",
+        "Lightweight process"
+      ],
+      "correctAnswer": "User thread"
+    },
+    {
+      "questionId": 20,
+      "unit": "Unit 2: Processes, Threads, and CPU Scheduling",
+      "questionText": "Which scheduling algorithm gives better response time for interactive systems?",
+      "options": [
+        "SJF",
+        "FCFS",
+        "Round Robin",
+        "Priority Scheduling"
+      ],
+      "correctAnswer": "Round Robin"
+    }
+  ]
+}

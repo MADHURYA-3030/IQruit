@@ -1,0 +1,249 @@
+
+{
+  "quizTitle": "Operating Systems – Unit 5: File System & Protection",
+  "category": "Operating Systems",
+  "difficulty": "Medium-Hard",
+  "createdAt": "2025-10-08T14:00:00Z",
+  "questions": [
+    {
+      "questionId": 1,
+      "unit": "Unit 5: File System & Protection",
+      "questionText": "Which of the following is NOT a type of access method for files?",
+      "options": [
+        "Sequential access",
+        "Direct access",
+        "Indexed access",
+        "Threaded access"
+      ],
+      "correctAnswer": "Threaded access"
+    },
+    {
+      "questionId": 2,
+      "unit": "Unit 5: File System & Protection",
+      "questionText": "In a file system, which structure allows for hierarchical organization of files?",
+      "options": [
+        "Linked list",
+        "Directory tree",
+        "Hash table",
+        "Circular buffer"
+      ],
+      "correctAnswer": "Directory tree"
+    },
+    {
+      "questionId": 3,
+      "unit": "Unit 5: File System & Protection",
+      "questionText": "Which file allocation method reduces external fragmentation completely?",
+      "options": [
+        "Contiguous allocation",
+        "Linked allocation",
+        "Indexed allocation",
+        "Direct allocation"
+      ],
+      "correctAnswer": "Indexed allocation"
+    },
+    {
+      "questionId": 4,
+      "unit": "Unit 5: File System & Protection",
+      "questionText": "Which operation is NOT part of the basic file system operations?",
+      "options": [
+        "Create",
+        "Read",
+        "Delete",
+        "Cache flush"
+      ],
+      "correctAnswer": "Cache flush"
+    },
+    {
+      "questionId": 5,
+      "unit": "Unit 5: File System & Protection",
+      "questionText": "Which of the following is a function of the file system internals?",
+      "options": [
+        "File mounting",
+        "Thread scheduling",
+        "Memory allocation",
+        "Semaphore operations"
+      ],
+      "correctAnswer": "File mounting"
+    },
+    {
+      "questionId": 6,
+      "unit": "Unit 5: File System & Protection",
+      "questionText": "Which allocation method links all the blocks of a file using pointers?",
+      "options": [
+        "Contiguous allocation",
+        "Indexed allocation",
+        "Linked allocation",
+        "Direct allocation"
+      ],
+      "correctAnswer": "Linked allocation"
+    },
+    {
+      "questionId": 7,
+      "unit": "Unit 5: File System & Protection",
+      "questionText": "Free-space management using a bitmap is useful when:",
+      "options": [
+        "Files are very large",
+        "Disk has a large number of blocks",
+        "Files are accessed sequentially",
+        "Memory is limited"
+      ],
+      "correctAnswer": "Disk has a large number of blocks"
+    },
+    {
+      "questionId": 8,
+      "unit": "Unit 5: File System & Protection",
+      "questionText": "Which structure is used to speed up file access in indexed allocation?",
+      "options": [
+        "Index block",
+        "Segment table",
+        "Page table",
+        "Access vector"
+      ],
+      "correctAnswer": "Index block"
+    },
+    {
+      "questionId": 9,
+      "unit": "Unit 5: File System & Protection",
+      "questionText": "Which of the following best describes a file system mount operation?",
+      "options": [
+        "Connecting a file system to the directory hierarchy",
+        "Formatting the disk",
+        "Creating a new file",
+        "Deleting temporary files"
+      ],
+      "correctAnswer": "Connecting a file system to the directory hierarchy"
+    },
+    {
+      "questionId": 10,
+      "unit": "Unit 5: File System & Protection",
+      "questionText": "Which protection mechanism allows each user to have different access rights for files?",
+      "options": [
+        "Access matrix",
+        "Priority scheduling",
+        "Semaphores",
+        "Mutex locks"
+      ],
+      "correctAnswer": "Access matrix"
+    },
+    {
+      "questionId": 11,
+      "unit": "Unit 5: File System & Protection",
+      "questionText": "What is the primary purpose of file system directories?",
+      "options": [
+        "Allocate memory to processes",
+        "Organize files for easy access",
+        "Schedule I/O operations",
+        "Store CPU state information"
+      ],
+      "correctAnswer": "Organize files for easy access"
+    },
+    {
+      "questionId": 12,
+      "unit": "Unit 5: File System & Protection",
+      "questionText": "Which directory implementation uses a single table containing file names and pointers?",
+      "options": [
+        "Single-level directory",
+        "Two-level directory",
+        "Tree-structured directory",
+        "Graph-structured directory"
+      ],
+      "correctAnswer": "Single-level directory"
+    },
+    {
+      "questionId": 13,
+      "unit": "Unit 5: File System & Protection",
+      "questionText": "Protection rings are used to:",
+      "options": [
+        "Organize files hierarchically",
+        "Provide layered access control in OS",
+        "Allocate memory dynamically",
+        "Improve disk scheduling"
+      ],
+      "correctAnswer": "Provide layered access control in OS"
+    },
+    {
+      "questionId": 14,
+      "unit": "Unit 5: File System & Protection",
+      "questionText": "Which method of file sharing allows multiple users to read and write files safely?",
+      "options": [
+        "Exclusive locks",
+        "Read-only access",
+        "Cooperative locks",
+        "Access control lists (ACLs)"
+      ],
+      "correctAnswer": "Access control lists (ACLs)"
+    },
+    {
+      "questionId": 15,
+      "unit": "Unit 5: File System & Protection",
+      "questionText": "Which of the following is TRUE about the domain of protection?",
+      "options": [
+        "It defines access rights for processes and objects",
+        "It manages memory fragmentation",
+        "It schedules CPU processes",
+        "It allocates disk blocks"
+      ],
+      "correctAnswer": "It defines access rights for processes and objects"
+    },
+    {
+      "questionId": 16,
+      "unit": "Unit 5: File System & Protection",
+      "questionText": "In file allocation, which method provides direct access to file blocks without sequential traversal?",
+      "options": [
+        "Contiguous allocation",
+        "Indexed allocation",
+        "Linked allocation",
+        "Sequential allocation"
+      ],
+      "correctAnswer": "Indexed allocation"
+    },
+    {
+      "questionId": 17,
+      "unit": "Unit 5: File System & Protection",
+      "questionText": "Which of the following is a disadvantage of contiguous allocation?",
+      "options": [
+        "Slow sequential access",
+        "External fragmentation",
+        "Complex directory management",
+        "No random access"
+      ],
+      "correctAnswer": "External fragmentation"
+    },
+    {
+      "questionId": 18,
+      "unit": "Unit 5: File System & Protection",
+      "questionText": "Which access method is most suitable for a database system requiring direct record retrieval?",
+      "options": [
+        "Sequential access",
+        "Direct access",
+        "Stream access",
+        "Circular access"
+      ],
+      "correctAnswer": "Direct access"
+    },
+    {
+      "questionId": 19,
+      "unit": "Unit 5: File System & Protection",
+      "questionText": "In access matrix, rows represent:",
+      "options": [
+        "Resources",
+        "Processes or subjects",
+        "Disk blocks",
+        "CPU cores"
+      ],
+      "correctAnswer": "Processes or subjects"
+    },
+    {
+      "questionId": 20,
+      "unit": "Unit 5: File System & Protection",
+      "questionText": "Which file system component manages allocation of free space?",
+      "options": [
+        "Directory structure",
+        "File control block (FCB)",
+        "Free space manager",
+        "Mount table"
+      ],
+      "correctAnswer": "Free space manager"
+    }
+  ]
+}

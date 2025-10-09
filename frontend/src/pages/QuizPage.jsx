@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useLocation, useNavigate, useParams, useSearchParams } from "react-router-dom";
-import quizData from "../data/quiz-data.json";
+import quizData from "../data/cn/cn-unit-1.json";
 
 const slugToUnit = (slug) => {
   if (!slug) return null;

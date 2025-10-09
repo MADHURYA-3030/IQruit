@@ -1,0 +1,218 @@
+{
+  "quizTitle": "Computer Networks Quiz - Unit 4: Network Layer & IP Protocols",
+  "category": "Computer Networks",
+  "difficulty": "Medium",
+  "createdAt": "2025-10-09T11:25:06.537816Z",
+  "questions": [
+    {
+      "questionId": 1,
+      "unit": "Unit 4: Network Layer",
+      "questionText": "In store-and-forward packet switching, a node:",
+      "options": [
+        "Forwards a packet immediately after receiving the first bit",
+        "Forwards a packet only after the entire packet is received",
+        "Drops packets without storing them",
+        "Broadcasts packets to all neighbors"
+      ],
+      "correctAnswer": "Forwards a packet only after the entire packet is received"
+    },
+    {
+      "questionId": 2,
+      "unit": "Unit 4: Network Layer",
+      "questionText": "Which service type provides guaranteed delivery with setup and teardown phases?",
+      "options": [
+        "Connectionless Service",
+        "Connection-Oriented Service",
+        "Datagram Service",
+        "Best-Effort Service"
+      ],
+      "correctAnswer": "Connection-Oriented Service"
+    },
+    {
+      "questionId": 3,
+      "unit": "Unit 4: Network Layer",
+      "questionText": "In a virtual circuit network, each packet contains:",
+      "options": [
+        "Full destination address",
+        "Virtual circuit identifier (VCI)",
+        "Only payload data",
+        "Source routing information"
+      ],
+      "correctAnswer": "Virtual circuit identifier (VCI)"
+    },
+    {
+      "questionId": 4,
+      "unit": "Unit 4: Network Layer",
+      "questionText": "Which of the following is NOT a routing algorithm?",
+      "options": [
+        "Flooding",
+        "Distance Vector",
+        "Link State",
+        "Congestion Control"
+      ],
+      "correctAnswer": "Congestion Control"
+    },
+    {
+      "questionId": 5,
+      "unit": "Unit 4: Routing Algorithms",
+      "questionText": "The shortest path algorithm is based on which principle?",
+      "options": [
+        "Random selection of routes",
+        "Optimality principle",
+        "Hierarchical routing",
+        "Distance thresholding"
+      ],
+      "correctAnswer": "Optimality principle"
+    },
+    {
+      "questionId": 6,
+      "unit": "Unit 4: Routing Algorithms",
+      "questionText": "Which routing algorithm uses Bellman-Ford as its basis?",
+      "options": ["Distance Vector", "Link State", "Flooding", "Hierarchical Routing"],
+      "correctAnswer": "Distance Vector"
+    },
+    {
+      "questionId": 7,
+      "unit": "Unit 4: Routing Algorithms",
+      "questionText": "In Link State routing, routers exchange:",
+      "options": [
+        "Entire routing tables periodically",
+        "Only link cost and neighbor information",
+        "Hop count data",
+        "Random path metrics"
+      ],
+      "correctAnswer": "Only link cost and neighbor information"
+    },
+    {
+      "questionId": 8,
+      "unit": "Unit 4: Routing Algorithms",
+      "questionText": "Which routing method sends packets to all possible outgoing links except the incoming one?",
+      "options": ["Shortest Path", "Flooding", "Distance Vector", "Hierarchical Routing"],
+      "correctAnswer": "Flooding"
+    },
+    {
+      "questionId": 9,
+      "unit": "Unit 4: Congestion Control",
+      "questionText": "Which of the following is NOT a congestion prevention policy?",
+      "options": [
+        "Admission control",
+        "Traffic throttling",
+        "Load shedding",
+        "Connection establishment"
+      ],
+      "correctAnswer": "Connection establishment"
+    },
+    {
+      "questionId": 10,
+      "unit": "Unit 4: Congestion Control",
+      "questionText": "The Leaky Bucket algorithm controls:",
+      "options": [
+        "Packet arrival rate",
+        "Average queue size",
+        "Packet output rate",
+        "Routing path"
+      ],
+      "correctAnswer": "Packet output rate"
+    },
+    {
+      "questionId": 11,
+      "unit": "Unit 4: Congestion Control",
+      "questionText": "The Token Bucket algorithm allows:",
+      "options": [
+        "Bursty traffic within limits",
+        "Constant rate output only",
+        "Unlimited data transfer",
+        "Packet dropping"
+      ],
+      "correctAnswer": "Bursty traffic within limits"
+    },
+    {
+      "questionId": 12,
+      "unit": "Unit 4: Internetworking",
+      "questionText": "Tunneling is used to:",
+      "options": [
+        "Encapsulate packets of one network within another",
+        "Convert analog signals to digital",
+        "Avoid congestion",
+        "Control broadcast domains"
+      ],
+      "correctAnswer": "Encapsulate packets of one network within another"
+    },
+    {
+      "questionId": 13,
+      "unit": "Unit 4: Internetworking",
+      "questionText": "Fragmentation in the network layer is done to:",
+      "options": [
+        "Handle different MTUs in networks",
+        "Speed up packet delivery",
+        "Avoid routing loops",
+        "Compress data"
+      ],
+      "correctAnswer": "Handle different MTUs in networks"
+    },
+    {
+      "questionId": 14,
+      "unit": "Unit 4: IP Protocols",
+      "questionText": "Which field in the IPv4 header is used to reassemble fragments?",
+      "options": [
+        "Header Length",
+        "Identification",
+        "TTL (Time to Live)",
+        "Flags"
+      ],
+      "correctAnswer": "Identification"
+    },
+    {
+      "questionId": 15,
+      "unit": "Unit 4: IP Protocols",
+      "questionText": "What is the size of an IPv4 address?",
+      "options": ["32 bits", "64 bits", "128 bits", "16 bits"],
+      "correctAnswer": "32 bits"
+    },
+    {
+      "questionId": 16,
+      "unit": "Unit 4: IP Protocols",
+      "questionText": "Which addressing scheme replaces classful addressing?",
+      "options": ["CIDR", "ARP", "RARP", "ICMP"],
+      "correctAnswer": "CIDR"
+    },
+    {
+      "questionId": 17,
+      "unit": "Unit 4: IP Protocols",
+      "questionText": "Which of the following is NOT a valid IPv6 feature?",
+      "options": [
+        "Simplified header format",
+        "Support for unlimited broadcast",
+        "Larger address space",
+        "Built-in security (IPSec)"
+      ],
+      "correctAnswer": "Support for unlimited broadcast"
+    },
+    {
+      "questionId": 18,
+      "unit": "Unit 4: IP Protocols",
+      "questionText": "The main header length in IPv6 is:",
+      "options": ["20 bytes", "40 bytes", "60 bytes", "80 bytes"],
+      "correctAnswer": "40 bytes"
+    },
+    {
+      "questionId": 19,
+      "unit": "Unit 4: IP Protocols",
+      "questionText": "Transition from IPv4 to IPv6 can be achieved using:",
+      "options": ["ARP", "Tunneling", "Fragmentation", "Translation"],
+      "correctAnswer": "Tunneling"
+    },
+    {
+      "questionId": 20,
+      "unit": "Unit 4: IP Protocols",
+      "questionText": "Which of the following correctly compares IPv4 and IPv6?",
+      "options": [
+        "IPv6 uses 32-bit addresses while IPv4 uses 128-bit",
+        "IPv4 supports IPsec natively while IPv6 does not",
+        "IPv6 eliminates the need for NAT due to large address space",
+        "IPv4 supports unlimited multicast"
+      ],
+      "correctAnswer": "IPv6 eliminates the need for NAT due to large address space"
+    }
+  ]
+}
