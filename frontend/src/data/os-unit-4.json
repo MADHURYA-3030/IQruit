@@ -1,0 +1,250 @@
+
+
+{
+  "quizTitle": "Operating Systems – Unit 4: Memory Management & Storage Management",
+  "category": "Operating Systems",
+  "difficulty": "Medium-Hard",
+  "createdAt": "2025-10-08T13:30:00Z",
+  "questions": [
+    {
+      "questionId": 1,
+      "unit": "Unit 4: Memory Management & Storage Management",
+      "questionText": "Which of the following memory allocation strategies may suffer from both internal and external fragmentation?",
+      "options": [
+        "Paging",
+        "Segmentation",
+        "Contiguous memory allocation",
+        "Demand paging"
+      ],
+      "correctAnswer": "Contiguous memory allocation"
+    },
+    {
+      "questionId": 2,
+      "unit": "Unit 4: Memory Management & Storage Management",
+      "questionText": "In paging, the page size is typically a power of two because:",
+      "options": [
+        "It simplifies address translation using bit masking",
+        "It allows variable page lengths",
+        "It maximizes physical memory usage",
+        "It supports dynamic swapping"
+      ],
+      "correctAnswer": "It simplifies address translation using bit masking"
+    },
+    {
+      "questionId": 3,
+      "unit": "Unit 4: Memory Management & Storage Management",
+      "questionText": "Which data structure is used by the operating system to translate logical addresses to physical addresses in paging?",
+      "options": [
+        "Frame table",
+        "Page table",
+        "Segment table",
+        "Translation lookaside buffer"
+      ],
+      "correctAnswer": "Page table"
+    },
+    {
+      "questionId": 4,
+      "unit": "Unit 4: Memory Management & Storage Management",
+      "questionText": "What happens during a page fault?",
+      "options": [
+        "A page is found in physical memory",
+        "The operating system swaps a page from memory to disk",
+        "The required page is not in memory and must be loaded from disk",
+        "The TLB cache is updated"
+      ],
+      "correctAnswer": "The required page is not in memory and must be loaded from disk"
+    },
+    {
+      "questionId": 5,
+      "unit": "Unit 4: Memory Management & Storage Management",
+      "questionText": "Which of the following is NOT a page replacement algorithm?",
+      "options": [
+        "FIFO",
+        "LRU",
+        "Optimal",
+        "Round Robin"
+      ],
+      "correctAnswer": "Round Robin"
+    },
+    {
+      "questionId": 6,
+      "unit": "Unit 4: Memory Management & Storage Management",
+      "questionText": "The process of swapping involves:",
+      "options": [
+        "Copying data between cache and CPU",
+        "Temporarily moving a process from main memory to secondary storage",
+        "Relocating pages within the main memory",
+        "Converting logical addresses into physical addresses"
+      ],
+      "correctAnswer": "Temporarily moving a process from main memory to secondary storage"
+    },
+    {
+      "questionId": 7,
+      "unit": "Unit 4: Memory Management & Storage Management",
+      "questionText": "In demand paging, the 'valid-invalid bit' in a page table entry indicates:",
+      "options": [
+        "Whether the page has been modified",
+        "Whether the page is in main memory",
+        "Whether the page is shared between processes",
+        "Whether the page is in cache memory"
+      ],
+      "correctAnswer": "Whether the page is in main memory"
+    },
+    {
+      "questionId": 8,
+      "unit": "Unit 4: Memory Management & Storage Management",
+      "questionText": "Thrashing occurs when:",
+      "options": [
+        "Processes are waiting for I/O operations",
+        "The CPU spends most of its time swapping pages rather than executing processes",
+        "There are too many threads running concurrently",
+        "The page size is too large"
+      ],
+      "correctAnswer": "The CPU spends most of its time swapping pages rather than executing processes"
+    },
+    {
+      "questionId": 9,
+      "unit": "Unit 4: Memory Management & Storage Management",
+      "questionText": "Which page replacement algorithm suffers from Belady’s anomaly?",
+      "options": [
+        "FIFO",
+        "LRU",
+        "Optimal",
+        "Clock"
+      ],
+      "correctAnswer": "FIFO"
+    },
+    {
+      "questionId": 10,
+      "unit": "Unit 4: Memory Management & Storage Management",
+      "questionText": "Copy-on-write is used to:",
+      "options": [
+        "Share pages between processes until a write occurs",
+        "Increase disk I/O performance",
+        "Copy files during swap operations",
+        "Avoid segmentation faults"
+      ],
+      "correctAnswer": "Share pages between processes until a write occurs"
+    },
+    {
+      "questionId": 11,
+      "unit": "Unit 4: Memory Management & Storage Management",
+      "questionText": "Which of the following allocation methods reduces internal fragmentation but increases external fragmentation?",
+      "options": [
+        "Fixed partitioning",
+        "Dynamic partitioning",
+        "Paging",
+        "Segmentation with paging"
+      ],
+      "correctAnswer": "Dynamic partitioning"
+    },
+    {
+      "questionId": 12,
+      "unit": "Unit 4: Memory Management & Storage Management",
+      "questionText": "The optimal page replacement algorithm:",
+      "options": [
+        "Replaces the page that was least recently used",
+        "Replaces the page that will not be used for the longest period in the future",
+        "Uses a random replacement strategy",
+        "Depends on process priority"
+      ],
+      "correctAnswer": "Replaces the page that will not be used for the longest period in the future"
+    },
+    {
+      "questionId": 13,
+      "unit": "Unit 4: Memory Management & Storage Management",
+      "questionText": "What is the purpose of the Translation Lookaside Buffer (TLB)?",
+      "options": [
+        "Stores pages swapped to disk",
+        "Caches recent page table entries to speed up address translation",
+        "Stores executable program code",
+        "Holds physical addresses permanently"
+      ],
+      "correctAnswer": "Caches recent page table entries to speed up address translation"
+    },
+    {
+      "questionId": 14,
+      "unit": "Unit 4: Memory Management & Storage Management",
+      "questionText": "Which of the following scheduling algorithms is used for disk scheduling?",
+      "options": [
+        "SSTF (Shortest Seek Time First)",
+        "Round Robin",
+        "Priority Scheduling",
+        "Shortest Job First"
+      ],
+      "correctAnswer": "SSTF (Shortest Seek Time First)"
+    },
+    {
+      "questionId": 15,
+      "unit": "Unit 4: Memory Management & Storage Management",
+      "questionText": "The 'working set model' is used to:",
+      "options": [
+        "Estimate the set of pages a process is actively using",
+        "Determine which processes to swap out",
+        "Measure total disk space",
+        "Optimize CPU burst prediction"
+      ],
+      "correctAnswer": "Estimate the set of pages a process is actively using"
+    },
+    {
+      "questionId": 16,
+      "unit": "Unit 4: Memory Management & Storage Management",
+      "questionText": "In HDD scheduling, which algorithm can lead to starvation?",
+      "options": [
+        "FCFS",
+        "SSTF",
+        "SCAN",
+        "C-SCAN"
+      ],
+      "correctAnswer": "SSTF"
+    },
+    {
+      "questionId": 17,
+      "unit": "Unit 4: Memory Management & Storage Management",
+      "questionText": "Which of the following best defines 'frame' in the context of paging?",
+      "options": [
+        "A fixed-size block of logical memory",
+        "A variable-size block of secondary storage",
+        "A fixed-size block of physical memory",
+        "A variable-size segment"
+      ],
+      "correctAnswer": "A fixed-size block of physical memory"
+    },
+    {
+      "questionId": 18,
+      "unit": "Unit 4: Memory Management & Storage Management",
+      "questionText": "Which of the following combinations causes internal fragmentation?",
+      "options": [
+        "Paging with fixed frame size",
+        "Segmentation with variable segment sizes",
+        "Dynamic partitioning",
+        "Demand paging"
+      ],
+      "correctAnswer": "Paging with fixed frame size"
+    },
+    {
+      "questionId": 19,
+      "unit": "Unit 4: Memory Management & Storage Management",
+      "questionText": "Which page replacement algorithm approximates LRU using a circular queue and reference bits?",
+      "options": [
+        "Optimal",
+        "FIFO",
+        "Clock",
+        "Random"
+      ],
+      "correctAnswer": "Clock"
+    },
+    {
+      "questionId": 20,
+      "unit": "Unit 4: Memory Management & Storage Management",
+      "questionText": "In virtual memory systems, the degree of multiprogramming is limited by:",
+      "options": [
+        "Number of CPUs",
+        "Amount of main memory and page faults",
+        "Disk I/O speed only",
+        "Context switch frequency"
+      ],
+      "correctAnswer": "Amount of main memory and page faults"
+    }
+  ]
+}

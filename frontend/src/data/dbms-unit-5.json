@@ -1,0 +1,194 @@
+{
+  "quizTitle": "DBMS - Unit 5: Transactions and Indexing",
+  "category": "DBMS",
+  "difficulty": "Medium-Hard",
+  "createdAt": "2025-10-08T12:00:00.000Z",
+  "questions": [
+    {
+      "questionId": 1,
+      "unit": "Unit 5",
+      "questionText": "Which of the following is NOT an ACID property?",
+      "options": [
+        "Atomicity",
+        "Consistency",
+        "Isolation",
+        "Durability Indexing"
+      ],
+      "correctAnswer": "Durability Indexing"
+    },
+    {
+      "questionId": 2,
+      "questionText": "Which state represents a transaction that has started but not yet completed?",
+      "options": ["Active", "Partially Committed", "Failed", "Committed"],
+      "correctAnswer": "Active"
+    },
+    {
+      "questionId": 3,
+      "questionText": "A transaction that satisfies all four ACID properties ensures:",
+      "options": [
+        "Faster query execution",
+        "Reliable and consistent database state",
+        "Reduced disk space usage",
+        "Multiple simultaneous failures"
+      ],
+      "correctAnswer": "Reliable and consistent database state"
+    },
+    {
+      "questionId": 4,
+      "questionText": "Concurrent execution of transactions improves:",
+      "options": [
+        "Performance and resource utilization",
+        "Reliability only",
+        "Security only",
+        "Recovery speed"
+      ],
+      "correctAnswer": "Performance and resource utilization"
+    },
+    {
+      "questionId": 5,
+      "questionText": "Two transactions are conflict serializable if:",
+      "options": [
+        "They can be reordered without changing the outcome",
+        "They always produce different results",
+        "They access disjoint data items",
+        "They have the same timestamp"
+      ],
+      "correctAnswer": "They can be reordered without changing the outcome"
+    },
+    {
+      "questionId": 6,
+      "questionText": "Recoverability ensures that:",
+      "options": [
+        "Transactions can be reversed when failure occurs",
+        "Transactions are executed in order",
+        "No transaction uses locks",
+        "Transactions cannot be rolled back"
+      ],
+      "correctAnswer": "Transactions can be reversed when failure occurs"
+    },
+    {
+      "questionId": 7,
+      "questionText": "Lock-based protocols are used to implement:",
+      "options": ["Serializability", "Recoverability", "Durability", "Isolation"],
+      "correctAnswer": "Isolation"
+    },
+    {
+      "questionId": 8,
+      "questionText": "A deadlock occurs when:",
+      "options": [
+        "Two or more transactions wait for each other’s locks",
+        "All transactions are completed",
+        "Locks are released prematurely",
+        "A transaction commits twice"
+      ],
+      "correctAnswer": "Two or more transactions wait for each other’s locks"
+    },
+    {
+      "questionId": 9,
+      "questionText": "Which concurrency control method uses timestamps?",
+      "options": [
+        "Time-based protocol",
+        "Lock-based protocol",
+        "Optimistic control",
+        "Two-phase commit"
+      ],
+      "correctAnswer": "Time-based protocol"
+    },
+    {
+      "questionId": 10,
+      "questionText": "Optimistic concurrency control assumes:",
+      "options": [
+        "Conflicts are frequent",
+        "Conflicts are rare",
+        "Locks are mandatory",
+        "Transactions never rollback"
+      ],
+      "correctAnswer": "Conflicts are rare"
+    },
+    {
+      "questionId": 11,
+      "questionText": "In case of failure after transaction commit, which property ensures the data remains?",
+      "options": ["Atomicity", "Consistency", "Isolation", "Durability"],
+      "correctAnswer": "Durability"
+    },
+    {
+      "questionId": 12,
+      "questionText": "Which protocol ensures no cyclic waits in locking?",
+      "options": ["Wait-Die", "Wound-Wait", "Timeout", "Both A and B"],
+      "correctAnswer": "Both A and B"
+    },
+    {
+      "questionId": 13,
+      "questionText": "Failure classification includes which of the following?",
+      "options": [
+        "Transaction failure",
+        "System crash",
+        "Disk failure",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above"
+    },
+    {
+      "questionId": 14,
+      "questionText": "Checkpoint in recovery ensures:",
+      "options": [
+        "Faster recovery after failure",
+        "Rollback of all transactions",
+        "Durability violation",
+        "None of the above"
+      ],
+      "correctAnswer": "Faster recovery after failure"
+    },
+    {
+      "questionId": 15,
+      "questionText": "Which of the following indexing technique supports range queries efficiently?",
+      "options": ["Hash Index", "B+ Tree", "Bitmap Index", "Dense Index"],
+      "correctAnswer": "B+ Tree"
+    },
+    {
+      "questionId": 16,
+      "questionText": "In a B+ Tree, data is stored in:",
+      "options": ["Internal nodes", "Leaf nodes", "Root only", "Both A and B"],
+      "correctAnswer": "Leaf nodes"
+    },
+    {
+      "questionId": 17,
+      "questionText": "What happens when a B+ Tree node becomes full?",
+      "options": [
+        "The node is merged",
+        "The node is deleted",
+        "The node is split",
+        "The index is rebuilt"
+      ],
+      "correctAnswer": "The node is split"
+    },
+    {
+      "questionId": 18,
+      "questionText": "Hash-based indexing is ideal for:",
+      "options": [
+        "Range queries",
+        "Exact match queries",
+        "Full table scans",
+        "Sorting operations"
+      ],
+      "correctAnswer": "Exact match queries"
+    },
+    {
+      "questionId": 19,
+      "questionText": "Which recovery technique uses log records?",
+      "options": ["Checkpointing", "Shadow paging", "Logging", "Rollback"],
+      "correctAnswer": "Logging"
+    },
+    {
+      "questionId": 20,
+      "questionText": "Which of the following ensures atomicity in a database system?",
+      "options": [
+        "Commit and rollback mechanisms",
+        "Indexing",
+        "Normalization",
+        "Foreign keys"
+      ],
+      "correctAnswer": "Commit and rollback mechanisms"
+    }
+  ]
+}
