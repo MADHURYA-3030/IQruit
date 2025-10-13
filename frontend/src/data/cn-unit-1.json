@@ -1,0 +1,173 @@
+{
+  "quizTitle": "Computer Networks Quiz - Unit 1: Introduction & Physical Layer",
+  "category": "Computer Networks",
+  "difficulty": "Medium",
+  "createdAt": "2025-10-09T12:05:06.537816Z",
+  "questions": [
+    {
+      "questionId": 1,
+      "unit": "Unit 1: Introduction",
+      "questionText": "Which of the following is a type of network that covers a small geographical area like a building?",
+      "options": ["LAN", "MAN", "WAN", "PAN"],
+      "correctAnswer": "LAN"
+    },
+    {
+      "questionId": 2,
+      "unit": "Unit 1: Introduction",
+      "questionText": "Which type of network spans a city and connects multiple LANs?",
+      "options": ["WAN", "MAN", "PAN", "CAN"],
+      "correctAnswer": "MAN"
+    },
+    {
+      "questionId": 3,
+      "unit": "Unit 1: Introduction",
+      "questionText": "A network that connects devices over a large geographical area, often using public transmission systems, is called:",
+      "options": ["LAN", "MAN", "WAN", "SAN"],
+      "correctAnswer": "WAN"
+    },
+    {
+      "questionId": 4,
+      "unit": "Unit 1: Network Topologies",
+      "questionText": "Which topology has a single central cable to which all nodes are connected?",
+      "options": ["Star", "Ring", "Bus", "Mesh"],
+      "correctAnswer": "Bus"
+    },
+    {
+      "questionId": 5,
+      "unit": "Unit 1: Network Topologies",
+      "questionText": "In which topology does each device connect to every other device in the network?",
+      "options": ["Ring", "Star", "Bus", "Mesh"],
+      "correctAnswer": "Mesh"
+    },
+    {
+      "questionId": 6,
+      "unit": "Unit 1: Network Topologies",
+      "questionText": "Failure of the central hub leads to network breakdown in which topology?",
+      "options": ["Bus", "Star", "Ring", "Mesh"],
+      "correctAnswer": "Star"
+    },
+    {
+      "questionId": 7,
+      "unit": "Unit 1: OSI Model",
+      "questionText": "How many layers are there in the OSI reference model?",
+      "options": ["5", "6", "7", "8"],
+      "correctAnswer": "7"
+    },
+    {
+      "questionId": 8,
+      "unit": "Unit 1: OSI Model",
+      "questionText": "Which OSI layer is responsible for end-to-end communication and reliability?",
+      "options": ["Session", "Network", "Transport", "Application"],
+      "correctAnswer": "Transport"
+    },
+    {
+      "questionId": 9,
+      "unit": "Unit 1: OSI Model",
+      "questionText": "The data link layer is responsible for:",
+      "options": [
+        "Routing packets between networks",
+        "Error detection and framing",
+        "Encoding of bits for transmission",
+        "Providing encryption services"
+      ],
+      "correctAnswer": "Error detection and framing"
+    },
+    {
+      "questionId": 10,
+      "unit": "Unit 1: TCP/IP Model",
+      "questionText": "The TCP/IP model consists of how many layers?",
+      "options": ["4", "5", "6", "7"],
+      "correctAnswer": "4"
+    },
+    {
+      "questionId": 11,
+      "unit": "Unit 1: TCP/IP Model",
+      "questionText": "Which layer of TCP/IP model corresponds to the Transport layer of OSI model?",
+      "options": ["Internet layer", "Application layer", "Transport layer", "Network Access layer"],
+      "correctAnswer": "Transport layer"
+    },
+    {
+      "questionId": 12,
+      "unit": "Unit 1: OSI vs TCP/IP",
+      "questionText": "Which of the following is TRUE about OSI and TCP/IP models?",
+      "options": [
+        "OSI has 4 layers and TCP/IP has 7 layers",
+        "TCP/IP is conceptual, OSI is practical",
+        "OSI separates presentation and session layers, TCP/IP combines them in application layer",
+        "Both models have identical layers"
+      ],
+      "correctAnswer": "OSI separates presentation and session layers, TCP/IP combines them in application layer"
+    },
+    {
+      "questionId": 13,
+      "unit": "Unit 1: Physical Layer",
+      "questionText": "Which layer is responsible for transmission of raw bits over a physical medium?",
+      "options": ["Data Link", "Physical", "Network", "Session"],
+      "correctAnswer": "Physical"
+    },
+    {
+      "questionId": 14,
+      "unit": "Unit 1: Guided Media",
+      "questionText": "Which of the following is a guided transmission medium?",
+      "options": ["Radio Waves", "Microwaves", "Optical Fiber", "Infrared"],
+      "correctAnswer": "Optical Fiber"
+    },
+    {
+      "questionId": 15,
+      "unit": "Unit 1: Guided Media",
+      "questionText": "Twisted-pair cables are mainly used for:",
+      "options": [
+        "Long-distance communication",
+        "Short-distance data transmission",
+        "Satellite communication",
+        "High-frequency broadcasting"
+      ],
+      "correctAnswer": "Short-distance data transmission"
+    },
+    {
+      "questionId": 16,
+      "unit": "Unit 1: Guided Media",
+      "questionText": "Which cable provides the highest bandwidth and least signal loss?",
+      "options": ["Twisted-pair", "Coaxial", "Fiber Optic", "Copper"],
+      "correctAnswer": "Fiber Optic"
+    },
+    {
+      "questionId": 17,
+      "unit": "Unit 1: Unguided Media",
+      "questionText": "Unguided media transmit signals through:",
+      "options": ["Physical cables", "Free space", "Optical fiber", "Twisted pair"],
+      "correctAnswer": "Free space"
+    },
+    {
+      "questionId": 18,
+      "unit": "Unit 1: Unguided Media",
+      "questionText": "Which of the following is an example of unguided transmission?",
+      "options": ["Microwave", "Coaxial", "Fiber Optic", "Twisted Pair"],
+      "correctAnswer": "Microwave"
+    },
+    {
+      "questionId": 19,
+      "unit": "Unit 1: Physical Layer",
+      "questionText": "Which of these tasks is NOT performed by the physical layer?",
+      "options": [
+        "Bit synchronization",
+        "Modulation",
+        "Error correction",
+        "Transmission of signals"
+      ],
+      "correctAnswer": "Error correction"
+    },
+    {
+      "questionId": 20,
+      "unit": "Unit 1: Comparison",
+      "questionText": "Which statement correctly describes OSI vs TCP/IP?",
+      "options": [
+        "OSI model was developed before TCP/IP model",
+        "TCP/IP is theoretical while OSI is practical",
+        "TCP/IP combines the OSI’s session and presentation layers into one",
+        "OSI model uses fewer layers than TCP/IP"
+      ],
+      "correctAnswer": "TCP/IP combines the OSI’s session and presentation layers into one"
+    }
+  ]
+}

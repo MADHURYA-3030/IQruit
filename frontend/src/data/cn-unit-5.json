@@ -1,0 +1,248 @@
+{
+  "quizTitle": "Computer Networks - Unit 5 Quiz",
+  "category": "Computer Networks",
+  "difficulty": "Medium-Hard",
+  "createdAt": "2025-10-08T12:00:00.000Z",
+  "questions": [
+    {
+      "questionId": 1,
+      "unit": "Unit 5: Transport Layer",
+      "questionText": "Which of the following services is provided by the transport layer?",
+      "options": [
+        "Routing",
+        "Segmentation and reassembly",
+        "Framing",
+        "Bit synchronization"
+      ],
+      "correctAnswer": "Segmentation and reassembly"
+    },
+    {
+      "questionId": 2,
+      "unit": "Unit 5: Transport Layer",
+      "questionText": "Which of the following uses port numbers to identify processes?",
+      "options": [
+        "Network Layer",
+        "Application Layer",
+        "Transport Layer",
+        "Session Layer"
+      ],
+      "correctAnswer": "Transport Layer"
+    },
+    {
+      "questionId": 3,
+      "unit": "Unit 5: Transport Layer",
+      "questionText": "UDP is best suited for which of the following applications?",
+      "options": [
+        "File transfer",
+        "Video streaming",
+        "Email transmission",
+        "Web browsing"
+      ],
+      "correctAnswer": "Video streaming"
+    },
+    {
+      "questionId": 4,
+      "unit": "Unit 5: Transport Layer",
+      "questionText": "Which of the following is NOT a characteristic of TCP?",
+      "options": [
+        "Connection-oriented",
+        "Reliable delivery",
+        "Low overhead",
+        "Unreliable delivery"
+      ],
+      "correctAnswer": "Unreliable delivery"
+    },
+    {
+      "questionId": 5,
+      "unit": "Unit 5: Transport Layer",
+      "questionText": "What is the size of the TCP header without any options?",
+      "options": [
+        "16 bytes",
+        "20 bytes",
+        "24 bytes",
+        "32 bytes"
+      ],
+      "correctAnswer": "20 bytes"
+    },
+    {
+      "questionId": 6,
+      "unit": "Unit 5: Transport Layer",
+      "questionText": "Which TCP mechanism is used for flow control?",
+      "options": [
+        "Congestion window",
+        "Sliding window",
+        "Checksum",
+        "Acknowledgment number"
+      ],
+      "correctAnswer": "Sliding window"
+    },
+    {
+      "questionId": 7,
+      "unit": "Unit 5: Transport Layer",
+      "questionText": "Which of the following is a TCP congestion control mechanism?",
+      "options": [
+        "Additive increase/multiplicative decrease",
+        "Stop-and-wait",
+        "Piggybacking",
+        "Checksum calculation"
+      ],
+      "correctAnswer": "Additive increase/multiplicative decrease"
+    },
+    {
+      "questionId": 8,
+      "unit": "Unit 5: Transport Layer",
+      "questionText": "Which protocol provides error detection but not error recovery?",
+      "options": [
+        "UDP",
+        "TCP",
+        "IP",
+        "HTTP"
+      ],
+      "correctAnswer": "UDP"
+    },
+    {
+      "questionId": 9,
+      "unit": "Unit 5: Application Layer",
+      "questionText": "Which protocol is used for transferring web pages on the World Wide Web?",
+      "options": [
+        "FTP",
+        "HTTP",
+        "SMTP",
+        "SNMP"
+      ],
+      "correctAnswer": "HTTP"
+    },
+    {
+      "questionId": 10,
+      "unit": "Unit 5: Application Layer",
+      "questionText": "Which of the following protocols is used to send emails?",
+      "options": [
+        "POP3",
+        "IMAP",
+        "SMTP",
+        "HTTP"
+      ],
+      "correctAnswer": "SMTP"
+    },
+    {
+      "questionId": 11,
+      "unit": "Unit 5: Application Layer",
+      "questionText": "Which protocol is used by a client to retrieve email messages from a mail server?",
+      "options": [
+        "SMTP",
+        "POP3",
+        "FTP",
+        "ICMP"
+      ],
+      "correctAnswer": "POP3"
+    },
+    {
+      "questionId": 12,
+      "unit": "Unit 5: Application Layer",
+      "questionText": "In web-based email systems, emails are typically accessed through:",
+      "options": [
+        "SMTP",
+        "IMAP or HTTP",
+        "POP2",
+        "TELNET"
+      ],
+      "correctAnswer": "IMAP or HTTP"
+    },
+    {
+      "questionId": 13,
+      "unit": "Unit 5: Application Layer",
+      "questionText": "What does DNS primarily do?",
+      "options": [
+        "Encrypt data",
+        "Translate domain names to IP addresses",
+        "Manage email transmission",
+        "Provide web hosting services"
+      ],
+      "correctAnswer": "Translate domain names to IP addresses"
+    },
+    {
+      "questionId": 14,
+      "unit": "Unit 5: Application Layer",
+      "questionText": "Which protocol is used for remote login?",
+      "options": [
+        "TELNET",
+        "SSH",
+        "HTTP",
+        "RIP"
+      ],
+      "correctAnswer": "TELNET"
+    },
+    {
+      "questionId": 15,
+      "unit": "Unit 5: Application Layer",
+      "questionText": "Which port number is used by TELNET by default?",
+      "options": [
+        "21",
+        "22",
+        "23",
+        "25"
+      ],
+      "correctAnswer": "23"
+    },
+    {
+      "questionId": 16,
+      "unit": "Unit 5: Application Layer",
+      "questionText": "Which layer is responsible for translating URLs into IP addresses?",
+      "options": [
+        "Network Layer",
+        "Transport Layer",
+        "Application Layer",
+        "Data Link Layer"
+      ],
+      "correctAnswer": "Application Layer"
+    },
+    {
+      "questionId": 17,
+      "unit": "Unit 5: Application Layer",
+      "questionText": "Which of the following protocols supports both message access and synchronization?",
+      "options": [
+        "SMTP",
+        "IMAP",
+        "POP3",
+        "FTP"
+      ],
+      "correctAnswer": "IMAP"
+    },
+    {
+      "questionId": 18,
+      "unit": "Unit 5: Application Layer",
+      "questionText": "Which security mechanism ensures the privacy and integrity of email communication?",
+      "options": [
+        "PGP (Pretty Good Privacy)",
+        "HTTP Authentication",
+        "DNSSEC",
+        "IPSec"
+      ],
+      "correctAnswer": "PGP (Pretty Good Privacy)"
+    },
+    {
+      "questionId": 19,
+      "unit": "Unit 5: Transport Layer",
+      "questionText": "What happens when TCP detects segment loss?",
+      "options": [
+        "It ignores it",
+        "It retransmits the segment",
+        "It drops the connection",
+        "It sends an ICMP error"
+      ],
+      "correctAnswer": "It retransmits the segment"
+    },
+    {
+      "questionId": 20,
+      "unit": "Unit 5: Application Layer",
+      "questionText": "DNS primarily uses which transport protocol?",
+      "options": [
+        "TCP only",
+        "UDP only",
+        "Both TCP and UDP",
+        "ICMP"
+      ],
+      "correctAnswer": "Both TCP and UDP"
+    }
+  ]
+}
