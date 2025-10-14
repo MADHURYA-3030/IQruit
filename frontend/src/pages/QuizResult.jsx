@@ -1,10 +1,36 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const QuizResult = () => {
   const { state } = useLocation();
   const navigate = useNavigate();
   const { score, total, questions, answers, unit } = state || {};
+  const savedRef = useRef(false);
+
+ useEffect(() => {
+  const saveResult = async () => {
+    try {
+      const token = localStorage.getItem("token");
+      if (!token) return;
+      await axios.post(
+        "http://localhost:5000/api/auth/save-result",
+        { score, total, unit },
+        { headers: { Authorization: `Bearer ${token}` } }
+      );
+      console.log("Result saved once");
+    } catch (err) {
+      console.log("Failed to save result:", err);
+    }
+  };
+
+  // Save only once, and only when all fields are valid
+  if (score && total && unit && !savedRef.current) {
+    savedRef.current = true; // <-- set immediately
+    saveResult(); // then call async save
+  }
+}, [score, total, unit]);
+
 
   if (typeof score !== "number" || typeof total !== "number") {
     return (

@@ -47,9 +47,26 @@ router.post("/login", async (req, res) => {
 // Get Profile
 router.get("/profile", authMiddleware, async (req, res) => {
   try {
-    const user = await User.findById(req.userId).select("name email");
+    const user = await User.findById(req.userId).select("name email quizResults");
     if (!user) return res.status(404).json({ message: "User not found" });
     res.json(user);
+  } catch (err) {
+    res.status(500).json({ message: "Server error" });
+  }
+});
+
+// Save Quiz Result
+router.post("/save-result", authMiddleware, async (req, res) => {
+  try {
+    const { score, total, unit } = req.body;
+    if (typeof score !== "number" || typeof total !== "number" || !unit) {
+      return res.status(400).json({ message: "Invalid data" });
+    }
+    const user = await User.findById(req.userId);
+    if (!user) return res.status(404).json({ message: "User not found" });
+    user.quizResults.push({ score, total, unit });
+    await user.save();
+    res.json({ message: "Result saved" });
   } catch (err) {
     res.status(500).json({ message: "Server error" });
   }
