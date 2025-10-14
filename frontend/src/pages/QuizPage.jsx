@@ -1,6 +1,20 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { useLocation, useNavigate, useParams, useSearchParams } from "react-router-dom";
-import quizData from "../data/cn/cn-unit-1.json";
+import cnUnit1 from "../data/cn/cn-unit-1.json";
+import cnUnit2 from "../data/cn/cn-unit-2.json";
+import cnUnit3 from "../data/cn/cn-unit-3.json";
+import cnUnit4 from "../data/cn/cn-unit-4.json";
+import cnUnit5 from "../data/cn/cn-unit-5.json";
+import dbmsUnit1 from "../data/dbms/dbms-unit-1.json";
+import dbmsUnit2 from "../data/dbms/dbms-unit-2.json";
+import dbmsUnit3 from "../data/dbms/dbms-unit-3.json";
+import dbmsUnit4 from "../data/dbms/dbms-unit-4.json";
+import dbmsUnit5 from "../data/dbms/dbms-unit-5.json";
+import osUnit1 from "../data/os/os-unit-1.json";
+import osUnit2 from "../data/os/os-unit-2.json";
+import osUnit3 from "../data/os/os-unit-3.json";
+import osUnit4 from "../data/os/os-unit-4.json";
+import osUnit5 from "../data/os/os-unit-5.json";
 
 const slugToUnit = (slug) => {
   if (!slug) return null;
@@ -20,16 +34,40 @@ const QuizPage = () => {
     (searchParams.get("unit") ? searchParams.get("unit") : null) ||
     slugToUnit(params.subject);
 
+  // Map unit numbers to their respective data for different subjects
+  const unitDataMap = {
+    cn: {
+      1: cnUnit1,
+      2: cnUnit2,
+      3: cnUnit3,
+      4: cnUnit4,
+      5: cnUnit5,
+    },
+    dbms: {
+      1: dbmsUnit1,
+      2: dbmsUnit2,
+      3: dbmsUnit3,
+      4: dbmsUnit4,
+      5: dbmsUnit5,
+    },
+    os: {
+      1: osUnit1,
+      2: osUnit2,
+      3: osUnit3,
+      4: osUnit4,
+      5: osUnit5,
+    },
+  };
+
+  // Determine subject from URL or state
+  const subject = location.state?.subject || params.subject || 'cn';
+  const subjectUnits = unitDataMap[subject] || unitDataMap['cn'];
+
+  const quizData = subjectUnits[requestedUnit] || subjectUnits[1]; // default to unit 1 if not found
+
   const allQuestions = quizData.questions || [];
 
-  const questions = useMemo(() => {
-    if (!requestedUnit) return allQuestions;
-    // if requestedUnit equals quiz category (e.g. "Computer Networks"), show all questions
-    if (requestedUnit.toLowerCase() === (quizData.category || "").toLowerCase()) return allQuestions;
-    const normalized = requestedUnit.toLowerCase();
-    const filtered = allQuestions.filter((q) => (q.unit || "").toLowerCase().includes(normalized));
-    return filtered.length ? filtered : allQuestions;
-  }, [allQuestions, requestedUnit]);
+  const questions = allQuestions; // Since we're loading the specific unit data, all questions are for that unit
 
   useEffect(() => {
     if (requestedUnit && !questions.length) {

@@ -1,19 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import BackButton from "./BackButton"; // reusable back button
+import BackButton from "./BackButton";
 
-const ComputerNetworks = () => {
+const OperatingSystems = () => {
   const navigate = useNavigate();
+  const units = [1, 2, 3, 4, 5];
 
   const handleNavigate = (unit) => {
-    if (unit === 1) {
-      navigate("/quiz/unit1");
-    } else {
-      alert(`Quiz for Unit ${unit} coming soon!`);
-    }
+    navigate(`/quiz/unit${unit}`, { state: { unit, subject: 'os' } });
   };
-
-  const units = [1, 2, 3, 4, 5];
 
   return (
     <div
@@ -24,11 +19,10 @@ const ComputerNetworks = () => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        position: "relative", // needed for BackButton absolute positioning
+        position: "relative",
       }}
     >
-      <BackButton /> {/* ← Added back button */}
-
+      <BackButton />
       <h1 style={{ color: "#003366", marginBottom: "30px" }}>Operating Systems</h1>
 
       <div
@@ -78,4 +72,4 @@ const ComputerNetworks = () => {
   );
 };
 
-export default ComputerNetworks;
+export default OperatingSystems;
