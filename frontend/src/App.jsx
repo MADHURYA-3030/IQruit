@@ -12,6 +12,7 @@ import ComputerNetworks from "./pages/ComputerNetworks";
 import OperatingSystems from "./pages/OperatingSystems";
 import Chatbot from "./components/Chatbot";
 import Dbms from "./pages/Dbms";
+import Contact from "./pages/Contact";
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
           <Route path="/OperatingSystems" element={<OperatingSystems />}/>
           <Route path="/Dbms" element={<Dbms />}/>
           <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
     </BrowserRouter>

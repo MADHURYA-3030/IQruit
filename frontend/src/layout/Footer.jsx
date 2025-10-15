@@ -22,9 +22,7 @@ const Footer = () => {
         <div className="footer-right">
           <h4>Follow Us</h4>
           <div className="social-icons">
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://github.com/MADHURYA-3030/IQruit" target="_blank" rel="noopener noreferrer">Github</a>
           </div>
         </div>
       </div>

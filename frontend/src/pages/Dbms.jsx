@@ -1,6 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import BackButton from "./BackButton";
+import BackButton from "./BackButton"; // import reusable back button
+
+
 
 const Dbms = () => {
   const navigate = useNavigate();
@@ -19,10 +21,15 @@ const Dbms = () => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        position: "relative",
+
+        position: "relative", // needed for absolute BackButton
       }}
     >
-      <BackButton />
+      <BackButton /> {/* ← Back button added here */}
+
+
+      
+        <BackButton />
       <h1 style={{ color: "#003366", marginBottom: "30px" }}>Database Management</h1>
 
       <div

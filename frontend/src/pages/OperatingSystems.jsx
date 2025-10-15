@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import BackButton from "./BackButton";
-
+import BackButton from "./BackButton"; // reusable back button
 const OperatingSystems = () => {
   const navigate = useNavigate();
   const units = [1, 2, 3, 4, 5];
@@ -19,9 +18,11 @@ const OperatingSystems = () => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        position: "relative",
+        position: "relative", // needed for BackButton absolute positioning
       }}
     >
+      <BackButton /> {/* ← Added back button */}
+
       <BackButton />
       <h1 style={{ color: "#003366", marginBottom: "30px" }}>Operating Systems</h1>
 
