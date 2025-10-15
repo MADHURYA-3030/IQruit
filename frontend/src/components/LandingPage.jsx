@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import Computer from "../assets/Computer.png";
 import "./LandingPage.css";
+import Footer from "../layout/Footer"; // ✅ Import footer
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -9,7 +10,6 @@ const LandingPage = () => {
   const subjectsRef = useRef(null);
 
   useEffect(() => {
-    // scroll when navigated with location.state
     if (location.state && location.state.scrollTo === "subjects") {
       setTimeout(() => {
         subjectsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -18,7 +18,6 @@ const LandingPage = () => {
     }
   }, [location, navigate]);
 
-  // listen for same-page header click events
   useEffect(() => {
     const onScrollRequest = () => {
       subjectsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -37,27 +36,20 @@ const LandingPage = () => {
     return m[unit] || unit.toLowerCase().replace(/\s+/g, "-");
   };
 
-  // require login before navigating to quiz page
   const handleStartQuiz = (unit) => {
-  const token = localStorage.getItem("token");
-  const slug = unitToSlug(unit); // convert subject name to slug (e.g., cn, dbms, os)
+    const token = localStorage.getItem("token");
+    const slug = unitToSlug(unit);
 
-  // If not logged in, redirect to login page with intended subject info
-  if (!token) {
-    navigate("/login", {
-      state: { from: location.pathname, intended: { subject: slug } },
-    });
-    return;
-  }
+    if (!token) {
+      navigate("/login", {
+        state: { from: location.pathname, intended: { subject: slug } },
+      });
+      return;
+    }
 
-  // User logged in → navigate directly to the subject-specific quiz page
-  if (slug) {
-    navigate(`/${slug}`);
-  } else {
-    navigate("/quiz");
-  }
-};
-
+    if (slug) navigate(`/${slug}`);
+    else navigate("/quiz");
+  };
 
   return (
     <div>
@@ -73,11 +65,18 @@ const LandingPage = () => {
               Networks, Database Management Systems, and Operating Systems.
             </p>
             <div className="hero-buttons">
-              {/* ensure we call the handler without passing event */}
-              <button type="button" className="btn-primary" onClick={() => handleStartQuiz()}>
+              <button
+                type="button"
+                className="btn-primary"
+                onClick={() => handleStartQuiz()}
+              >
                 Start Learning
               </button>
-              <button type="button" className="btn-secondary" onClick={() => handleStartQuiz()}>
+              <button
+                type="button"
+                className="btn-secondary"
+                onClick={() => handleStartQuiz()}
+              >
                 View Courses
               </button>
             </div>
@@ -119,7 +118,11 @@ const LandingPage = () => {
               </div>
               <div className="card-footer">
                 <span>350+ Questions</span>
-                <button type="button" className="start-quiz" onClick={() => handleStartQuiz("Computer Networks")}>
+                <button
+                  type="button"
+                  className="start-quiz"
+                  onClick={() => handleStartQuiz("Computer Networks")}
+                >
                   Start Quiz →
                 </button>
               </div>
@@ -141,7 +144,11 @@ const LandingPage = () => {
               </div>
               <div className="card-footer">
                 <span>400+ Questions</span>
-                <button type="button" className="start-quiz" onClick={() => handleStartQuiz("Database Management")}>
+                <button
+                  type="button"
+                  className="start-quiz"
+                  onClick={() => handleStartQuiz("Database Management")}
+                >
                   Start Quiz →
                 </button>
               </div>
@@ -163,7 +170,11 @@ const LandingPage = () => {
               </div>
               <div className="card-footer">
                 <span>300+ Questions</span>
-                <button type="button" className="start-quiz" onClick={() => handleStartQuiz("Operating Systems")}>
+                <button
+                  type="button"
+                  className="start-quiz"
+                  onClick={() => handleStartQuiz("Operating Systems")}
+                >
                   Start Quiz →
                 </button>
               </div>
@@ -171,6 +182,9 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
+
+      {/* ✅ Add Footer at the bottom */}
+      <Footer />
     </div>
   );
 };

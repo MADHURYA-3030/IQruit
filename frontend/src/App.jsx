@@ -11,6 +11,7 @@ import SignupPage from "./components/SignupPage"; // changed to use components/S
 import ComputerNetworks from "./pages/ComputerNetworks";
 import OperatingSystems from "./pages/OperatingSystems";
 import Dbms from "./pages/Dbms";
+import Contact from "./pages/Contact";
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
           <Route path="/OperatingSystems" element={<OperatingSystems />}/>
           <Route path="/Dbms" element={<Dbms />}/>
           <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
     </BrowserRouter>
