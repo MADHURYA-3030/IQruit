@@ -5,37 +5,30 @@ import "./Contact.css"; // for styling
 const contributors = [
   {
     name: "Nikhitha Ram",
-    role: "Backend Developer",
     linkedIn: "https://www.linkedin.com/in/nikhitha-ram-talla-6955342ba", // your real LinkedIn URL
   },
   {
     name: "Madhurya",
-    role: "Backend Developer",
     linkedIn: "https://www.linkedin.com/in/durga-madhurya-gunupudi-b3aab1318/",
   },
   {
     name: "Lasya Priya",
-    role: "UI/UX Designer",
     linkedIn: "https://www.linkedin.com/in/lasya-priya-madala-3493b1290/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
     name:"Anusha",
-    role:"UI/UX Designer",
     linkedIn:"https://www.linkedin.com/in/anusha-kommula-313068338",
   },
   {
     name:"Manvitha",
-    role:"UI/UX Designer",
     linkedIn:"https://www.linkedin.com/in/manvitha-sree-jaldani-78b6b9296/",
   },
   {
     name:"Deekshitha",
-    role:"UI/UX Designer",
     linkedIn:"https://www.linkedin.com/in/deekshitha-kammela-8395b8290/",
   },
   {
     name:"Akanksha",
-    role:"Backend Developer",
     linkedIn:"https://www.linkedin.com/in/akankshasai-nimmagadda-b997452b7/",
   }
 
