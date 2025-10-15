@@ -2,18 +2,15 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import BackButton from "./BackButton"; // import reusable back button
 
-const ComputerNetworks = () => {
+
+
+const Dbms = () => {
   const navigate = useNavigate();
+  const units = [1, 2, 3, 4, 5];
 
   const handleNavigate = (unit) => {
-    if (unit === 1) {
-      navigate("/quiz/unit1");
-    } else {
-      alert(`Quiz for Unit ${unit} coming soon!`);
-    }
+    navigate(`/quiz/unit${unit}`, { state: { unit, subject: 'dbms' } });
   };
-
-  const units = [1, 2, 3, 4, 5];
 
   return (
     <div
@@ -24,11 +21,15 @@ const ComputerNetworks = () => {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
+
         position: "relative", // needed for absolute BackButton
       }}
     >
       <BackButton /> {/* ← Back button added here */}
 
+
+      
+        <BackButton />
       <h1 style={{ color: "#003366", marginBottom: "30px" }}>Database Management</h1>
 
       <div
@@ -78,4 +79,4 @@ const ComputerNetworks = () => {
   );
 };
 
-export default ComputerNetworks;
+export default Dbms;

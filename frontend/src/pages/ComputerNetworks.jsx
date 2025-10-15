@@ -1,19 +1,15 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+
 import BackButton from "./BackButton"; // import the reusable button
 
 const ComputerNetworks = () => {
   const navigate = useNavigate();
+  const units = [1, 2, 3, 4, 5];
 
   const handleNavigate = (unit) => {
-    if (unit === 1) {
-      navigate("/quiz/unit1");
-    } else {
-      alert(`Quiz for Unit ${unit} coming soon!`);
-    }
+    navigate(`/quiz/unit${unit}`, { state: { unit, subject: 'cn' } });
   };
-
-  const units = [1, 2, 3, 4, 5];
 
   return (
     <div
@@ -28,7 +24,8 @@ const ComputerNetworks = () => {
       }}
     >
       <BackButton /> {/* ← Back button added here */}
-
+    
+      <BackButton />
       <h1 style={{ color: "#003366", marginBottom: "30px" }}>Computer Networks</h1>
 
       <div

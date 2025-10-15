@@ -9,7 +9,7 @@ import LoginPage from "./components/LoginPage";
 import ProfilePage from "./components/ProfilePage";
 import SignupPage from "./components/SignupPage"; // changed to use components/SignupPage
 import ComputerNetworks from "./pages/ComputerNetworks";
-import OperatingSystems from "./pages/Operating Systems";
+import OperatingSystems from "./pages/OperatingSystems";
 import Dbms from "./pages/Dbms";
 
 const App = () => {

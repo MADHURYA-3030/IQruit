@@ -46,6 +46,21 @@ const ProfilePage = () => {
         <p>
           <strong>Email:</strong> {user.email}
         </p>
+
+        {user.quizResults && user.quizResults.length > 0 && (
+          <div style={{ marginTop: 20 }}>
+            <h3>Quiz Results</h3>
+            <ul style={{ listStyle: "none", padding: 0 }}>
+              {user.quizResults.map((result, index) => (
+                <li key={index} style={{ marginBottom: 10, padding: 10, border: "1px solid #ccc", borderRadius: 5 }}>
+                  <p><strong>Unit:</strong> {result.unit}</p>
+                  <p><strong>Score:</strong> {result.score}/{result.total} ({Math.round((result.score / result.total) * 100)}%)</p>
+                  <p><strong>Date:</strong> {new Date(result.date).toLocaleDateString()}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );
