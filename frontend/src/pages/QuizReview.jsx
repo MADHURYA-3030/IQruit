@@ -1,4 +1,5 @@
 import React from "react";
+import { ArrowLeft } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const QuizReview = () => {
@@ -17,6 +18,11 @@ const QuizReview = () => {
 
   return (
     <div style={{ padding: 24, maxWidth: 900, margin: "0 auto" }}>
+      <div className="back-button-container">
+        <button className="back-button" onClick={() => navigate(-1)}>
+          <ArrowLeft size={20} />
+        </button>
+      </div>
       <h2>Review Answers</h2>
       <div style={{ display: "grid", gap: 12, marginTop: 12 }}>
         {questions.map((q, idx) => {
@@ -44,9 +50,7 @@ const QuizReview = () => {
         })}
       </div>
 
-      <div style={{ marginTop: 12 }}>
-        <button onClick={() => navigate(-1)} style={{ padding: "8px 12px" }}>Back</button>
-      </div>
+      
     </div>
   );
 };

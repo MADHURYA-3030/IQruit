@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { ArrowLeft, UserCircle2 } from "lucide-react"; // 👈 Person icon added
 import { useNavigate } from "react-router-dom";
-import "./ProfilePage.css"; // for button styling
+import "./ProfilePage.css";
 
 const ProfilePage = () => {
   const [user, setUser] = useState(null);
@@ -11,7 +12,7 @@ const ProfilePage = () => {
     const token = localStorage.getItem("token");
 
     if (!token) {
-      navigate("/login"); // redirect if not logged in
+      navigate("/login");
       return;
     }
 
@@ -28,33 +29,51 @@ const ProfilePage = () => {
       });
   }, [navigate]);
 
-  if (!user) return <p>Loading profile...</p>;
+  if (!user) return <p className="loading">Loading profile...</p>;
 
   return (
     <div className="page">
       <div className="back-button-container">
         <button className="back-button" onClick={() => navigate(-1)}>
-          ← Back
+          <ArrowLeft size={20} />
         </button>
       </div>
 
       <div className="profile-container">
+        {/* 👇 Profile Avatar Section */}
+        <div className="avatar-container">
+          {user.image ? (
+            <img src={user.image} alt="Profile" className="profile-image" />
+          ) : (
+            <UserCircle2 size={100} color="#007bff" />
+          )}
+        </div>
+
         <h2>My Profile</h2>
-        <p>
-          <strong>Name:</strong> {user.name}
-        </p>
-        <p>
-          <strong>Email:</strong> {user.email}
-        </p>
+        <div className="user-info">
+          <p>
+            <strong>Name:</strong> {user.name}
+          </p>
+          <p>
+            <strong>Email:</strong> {user.email}
+          </p>
+        </div>
+
         {user.quizResults && user.quizResults.length > 0 && (
-          <div style={{ marginTop: 20 }}>
+          <div className="quiz-results">
             <h3>Quiz Results</h3>
-            <ul style={{ listStyle: "none", padding: 0 }}>
+            <ul>
               {user.quizResults.map((result, index) => (
-                <li key={index} style={{ marginBottom: 10, padding: 10, border: "1px solid #ccc", borderRadius: 5 }}>
+                <li key={index} className="quiz-result-item">
                   <p><strong>Unit:</strong> {result.unit}</p>
-                  <p><strong>Score:</strong> {result.score}/{result.total} ({Math.round((result.score / result.total) * 100)}%)</p>
-                  <p><strong>Date:</strong> {new Date(result.date).toLocaleDateString()}</p>
+                  <p>
+                    <strong>Score:</strong> {result.score}/{result.total} (
+                    {Math.round((result.score / result.total) * 100)}%)
+                  </p>
+                  <p>
+                    <strong>Date:</strong>{" "}
+                    {new Date(result.date).toLocaleDateString()}
+                  </p>
                 </li>
               ))}
             </ul>

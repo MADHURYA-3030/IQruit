@@ -72,15 +72,15 @@ const LandingPage = () => {
               Prepare for your dream job with comprehensive quizzes on Computer
               Networks, Database Management Systems, and Operating Systems.
             </p>
-            <div className="hero-buttons">
-              {/* ensure we call the handler without passing event */}
+            {/* <div className="hero-buttons">
+              
               <button type="button" className="btn-primary" onClick={() => handleStartQuiz()}>
                 Start Learning
               </button>
               <button type="button" className="btn-secondary" onClick={() => handleStartQuiz()}>
                 View Courses
               </button>
-            </div>
+            </div> */}
             <div className="hero-stats">
               <span>📘 1000+ Questions</span>
               <span>🏆 Expert Curated</span>
