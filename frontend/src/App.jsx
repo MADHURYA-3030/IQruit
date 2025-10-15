@@ -10,6 +10,7 @@ import ProfilePage from "./components/ProfilePage";
 import SignupPage from "./components/SignupPage"; // changed to use components/SignupPage
 import ComputerNetworks from "./pages/ComputerNetworks";
 import OperatingSystems from "./pages/OperatingSystems";
+import Chatbot from "./components/Chatbot";
 import Dbms from "./pages/Dbms";
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/quiz/:subject/:unit" element={<QuizPage />} />
           <Route path="/quiz/result" element={<QuizResult />} />
           <Route path="/quiz/review" element={<QuizReview />} />
+          <Route path="/chatbot" element={<Chatbot />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/profile" element={<ProfilePage />} />
