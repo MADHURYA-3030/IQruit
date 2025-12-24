@@ -1,4 +1,4 @@
-**iQruit** – Quiz Platform
+**IQruit** – Quiz Platform
 
 iQruit is a simple web-based quiz platform that allows users to attempt quizzes and get instant scores. It is designed to test knowledge and support basic skill evaluation through structured quizzes.
 
@@ -20,10 +20,10 @@ Database: MongoDB
 
 **Installation & Setup**
 # Clone the repository
-git clone https://github.com/your-username/iQruit.git
+git clone https://github.com/your-username/IQruit.git
 
 # Navigate to the project directory
-cd iQruit
+cd IQruit
 
 # Install dependencies
 npm install
